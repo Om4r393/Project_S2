@@ -78,7 +78,7 @@ class parking:
                 heure_entree = self.vehicules_presents[matricule]
                 heure_sortie = datetime.now().strftime("%H:%M")
                 duree = self.calculer_duree(heure_entree, heure_sortie)
-                self.log_box.insert(tk.END, f"📤 Sortie: {matricule} | Durée: {duree}h | Payé ✓\n")
+                self.log_box.insert(tk.END, f"📤 Sortie: {matricule} | Durée: {duree}h\n")
                 del self.vehicules_presents[matricule]
                 self.plate_entry.delete(0, tk.END)
             else:
